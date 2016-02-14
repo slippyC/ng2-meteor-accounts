@@ -8,7 +8,8 @@
 import {Injectable} from 'angular2/core';
 
 type AccountDetails = {
-  name: string;
+  username?: string;
+  email:    string;
   password: string;
   profile?: Object;
 };
