@@ -10,7 +10,7 @@ declare module ngMeteorAccounts {
 
   type AccountDetails = {
     username?:string;
-    password: string;
+    email:    string;
     password: string;
     profile?: Object;
   }
