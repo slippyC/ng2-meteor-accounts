@@ -7,8 +7,8 @@
 
 import {Injectable} from 'angular2/core';
 
-type AccountDetails = {
-  username?: string;
+interface IAccountDetails = {
+  username?:string;
   email:    string;
   password: string;
   profile?: Object;
@@ -65,7 +65,7 @@ export class AccountsService extends BasicAccountsService {
     return this.runWithPromise(accountFn);
   }
 
-  register(newUser: AccountDetails): Promise<any> {
+  register(newUser: IAccountDetails): Promise<any> {
     var accountFn = Accounts.createUser.bind(null, newUser);
     return this.runWithPromise(accountFn);
   }
