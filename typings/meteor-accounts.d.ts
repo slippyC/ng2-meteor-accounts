@@ -8,7 +8,7 @@ declare module ngMeteorAccounts {
     autorun(runFunc: Function, autoBind: boolean): void;
   }
 
-  type AccountDetails = {
+  interface IAccountDetails = {
     username?:string;
     email:    string;
     password: string;
@@ -31,7 +31,7 @@ declare module ngMeteorAccounts {
   class AccountsService extends BasicAccountsService {
     login(usernameOrEmail: string, password: string): Promise<any>;
 
-    register(newUser: AccountDetails): Promise<any>;
+    register(newUser: IAccountDetails): Promise<any>;
 
     forgotPassword(email: string): Promise<any>;
 
